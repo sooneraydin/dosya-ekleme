@@ -1,0 +1,39 @@
+(lang dune 3.17)
+
+(name wallet_gen)
+
+(generate_opam_files true)
+
+(authors "Octra Labs <dev@octra.org>")
+
+(maintainers "Octra Labs <dev@octra.org>")
+
+(license MIT)
+
+(source
+ (github lambda0xE/wallet-gen))
+
+(homepage "https://github.com/lambda0xE/wallet-gen")
+
+(bug_reports "https://github.com/lambda0xE/wallet-gen/issues")
+
+(package
+ (name wallet_gen)
+ (synopsis "Octra Wallet Generator")
+ (description "Key pair generator for Octra Test Network")
+ (depends
+  (ocaml
+   (>= 4.08))
+  dune
+  digestif
+  mirage-crypto
+  mirage-crypto-ec
+  mirage-crypto-pk
+  mirage-crypto-rng
+  mirage-crypto-rng-unix
+  yojson
+  zarith
+  cstruct
+  hex
+  str)
+ (allow_empty))
